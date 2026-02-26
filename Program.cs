@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            #region Part 1 Question 1
+            #region Part 1 Question 1 A
             /*
              1 - Public fields expose internal data directly
               Both Owner and Balance are declared as public, which allows any external code to modify them without restriction.
@@ -24,7 +24,7 @@
              */
             #endregion
 
-            #region Question 2
+            #region Question 2 B
 
             /*
              To apply proper encapsulation, the class should be redesigned as follows:
@@ -47,7 +47,23 @@
             
             This ensures that the object fully controls how its data is accessed and modified.
              */
+            #endregion 
+
+            #region Question 3 C 
+            /*
+             It breaks encapsulation
+            External code can change the object’s data without following any rules.
+
+            2️-It allows invalid object states => Without validation, the system may contain incorrect or inconsistent data.
+
+            3️- It reduces maintainability => If validation or logic needs to be added later, every place that accesses the field must be modified.
+                Using properties centralizes changes in one location.
+
+            4️- It removes control from the class => In  object should define how its data is used and modified. Public fields remove this control and make the design fragile.
+             */
             #endregion
+
+
 
         }
     }
