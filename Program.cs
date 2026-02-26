@@ -24,6 +24,31 @@
              */
             #endregion
 
+            #region Question 2
+
+            /*
+             To apply proper encapsulation, the class should be redesigned as follows:
+            
+                1- Make the fields private to hide internal data from direct external access.
+            
+                2-Provide properties to allow controlled read access to the data.
+            
+                3-Restrict modifications to the balance through well-defined methods such as:
+                    A- A Deposit method to add funds, which checks for positive amounts.
+                    
+                    B- A Withdraw method that checks for sufficient balance and prevents negative withdrawals.
+            
+            
+              4- Add validation rules inside these methods to enforce business logic, such as:
+            
+              5- Prevent withdrawing more than the available balance
+            
+              6- Reject negative amounts
+            
+            This ensures that the object fully controls how its data is accessed and modified.
+             */
+            #endregion
+
         }
     }
 }
