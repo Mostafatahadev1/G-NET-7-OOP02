@@ -47,7 +47,7 @@
             
             This ensures that the object fully controls how its data is accessed and modified.
              */
-            #endregion 
+            #endregion
 
             #region Question 3 C 
             /*
@@ -61,6 +61,31 @@
 
             4️- It removes control from the class => In  object should define how its data is used and modified. Public fields remove this control and make the design fragile.
              */
+            #endregion
+
+
+            #region Question 4 
+
+            // What is the difference between a Field and a Property in C#?
+
+            /*
+             1- A field is a variable that stores data directly inside a class.
+                => Usually declared as public or private variables.
+                => Has no validation or logic by default.
+                => Breaks encapsulation if exposed publicly.
+                => Accessed directly.
+                => Example: public string Owner;
+            2- A property provides controlled access to that data.
+                => Uses get and set accessors.
+                => Can include validation logic in the set accessor.
+                => Supports encapsulation and protects object state.
+                => Accessed through methods (get/set).
+                => Looks like a field from outside but behaves like a method internally.
+                => Example: public string Owner { get; private set; }
+
+             */
+
+
             #endregion
 
 
