@@ -7,6 +7,8 @@ namespace G_NET_7_OOP02
     {
         static void Main(string[] args)
         {
+            #region Part 1
+
             #region Part 1 Question 1 A
             /*
              1 - Public fields expose internal data directly
@@ -115,6 +117,62 @@ namespace G_NET_7_OOP02
                      => We continued to protect the data (Encapsulation as well).
              */
             #endregion
+
+            #region Question 7
+            // a) What does the `static` keyword mean on `TotalOrders`?
+            /*
+             => static means this variable belongs to the class itself (Order)
+             => not to individual objects (instances)
+             => All objects of Order share the same TotalOrders variable
+                For example ;
+                    Order order1 = new Order("Pizaa");
+                    Order order2 = new Order("Burger");
+                    order1.TotalOrders++; // TotalOrders is now 1
+                    order2.TotalOrders++; // TotalOrders is now 2 (shared across all instances)
+             => TotalOrders will be 2 (shared across all objects)
+             => Difference between TotalOrders and Item:
+                - TotalOrders → static (shared between all objects)
+                - Item → instance variable (each object has its own copy)
+            o1.Item = "Pizaa"
+            o2.Item = "Burger"
+
+
+ 
+
+             */
+
+            #endregion
+
+            #region Question 8
+            // b) Can a static method inside `Order` access the `Item` field directly?
+            /*
+             => No, it cannot
+             => Because static methods belong to the class, not to a specific object
+             => And Item is an instance variable, which requires an object
+             => Correct way: pass an object to the static method
+
+            
+                public static void PrintItem(Order order)
+                {
+                    Console.WriteLine(order.Item); // correct
+                }
+                
+                public static void PrintItem()
+                {
+                    // Console.WriteLine(Item); ===> compile-time error
+                }
+                
+
+
+
+
+             */
+
+            #endregion
+
+
+            #endregion
+
         }
 
 
