@@ -1,5 +1,8 @@
-﻿namespace G_NET_7_OOP02
+﻿using System.Diagnostics;
+
+namespace G_NET_7_OOP02
 {
+    [DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
     internal class Program
     {
         static void Main(string[] args)
@@ -89,7 +92,18 @@
             #endregion
 
 
-
+            #region Question 5
+            // What is this[int index] called? Explain its purpose.
+            /*
+            => It allows an object to be accessed like an array instead of using methods.
+             Indexers improve:
+                1- Readability => Accessing elements with array-like syntax is often more intuitive.
+                2-Ease of Use => It allows for more natural code when working with collections or custom data structures.
+                3- Natural acess => It allows the class to be accessed using an index, which can be more convenient than calling methods for certain types of data.
+             */
+            #endregion
         }
+
+
     }
 }
