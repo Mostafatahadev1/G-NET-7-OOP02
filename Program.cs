@@ -102,6 +102,19 @@ namespace G_NET_7_OOP02
                 3- Natural acess => It allows the class to be accessed using an index, which can be more convenient than calling methods for certain types of data.
              */
             #endregion
+
+            #region Question 6
+            // What happens if someone writes `register[10] = "Ali";` ? How would you make the indexer safer?
+            /*
+             => IndexOutOfRangeException => run-time error if the index is out of bounds. => Invalid index
+            How to make the indexer safer
+                1- Add bounds checking => Check if the index is within the valid range before accessing the array.
+                2- Throw a meaningful exception => If the index is out of bounds, throw an exception with a clear message.
+                3- Use a collection that handles bounds automatically => Instead of using a raw array, use a List<string> which provides built-in bounds checking.
+                     => We prevented an incomprehensible crash
+                     => We continued to protect the data (Encapsulation as well).
+             */
+            #endregion
         }
 
 
